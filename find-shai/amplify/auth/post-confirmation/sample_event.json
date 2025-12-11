@@ -1,0 +1,22 @@
+{
+    "version": "1",
+    "region": "eu-west-1",
+    "userPoolId": "eu-west-1_SAMPLE",
+    "userName": "sample-user-id",
+    "callerContext": {
+      "awsSdkVersion": "aws-sdk-swift-1.0",
+      "clientId": "sample-client-id"
+    },
+    "triggerSource": "PostConfirmation_ConfirmSignUp",
+    "request": {
+      "userAttributes": {
+        "sub": "sample-user-id",
+        "email_verified": "true",
+        "cognito:user_status": "CONFIRMED",
+        "email": "sample@example.com",
+        "given_name": "SampleName",
+        "preferred_username": "caregiver"
+      }
+    },
+    "response": {}
+  }

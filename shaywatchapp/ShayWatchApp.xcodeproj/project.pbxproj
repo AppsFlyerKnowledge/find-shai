@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A52FC6AA2DC0C332000ECA75 /* AWSSigner in Frameworks */ = {isa = PBXBuildFile; productRef = A52FC6A92DC0C332000ECA75 /* AWSSigner */; };
+		A581ABD128D70F5A0087CE9B /* Main_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A581ABD028D70F5A0087CE9B /* Main_ExtensionDelegate.swift */; };
+		A5B9DA0D28994CDA00364E4F /* Shai's Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A5B9DA0C28994CDA00364E4F /* Shai's Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A5B9DA1228994CDB00364E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B9DA1128994CDB00364E4F /* Assets.xcassets */; };
+		A5B9DA1D28994CDB00364E4F /* ShayWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA1C28994CDB00364E4F /* ShayWatchAppApp.swift */; };
+		A5B9DA1F28994CDB00364E4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA1E28994CDB00364E4F /* ContentView.swift */; };
+		A5B9DA2128994CDB00364E4F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA2028994CDB00364E4F /* NotificationController.swift */; };
+		A5B9DA2328994CDB00364E4F /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA2228994CDB00364E4F /* NotificationView.swift */; };
+		A5B9DA2528994CDB00364E4F /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA2428994CDB00364E4F /* ComplicationController.swift */; };
+		A5B9DA2728994CDB00364E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B9DA2628994CDB00364E4F /* Assets.xcassets */; };
+		A5B9DA2A28994CDB00364E4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B9DA2928994CDB00364E4F /* Preview Assets.xcassets */; };
+		A5B9DA3B28994DD300364E4F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA3A28994DD300364E4F /* LocationManager.swift */; };
+		A5B9DA3D2899536500364E4F /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B9DA3C2899536500364E4F /* LocationTracker.swift */; };
+		A5EE2125289FC6CE002EF017 /* ShayWatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE2124289FC6CE002EF017 /* ShayWatchAppTests.swift */; };
+		A5EE212B289FE524002EF017 /* AWSSigner in Frameworks */ = {isa = PBXBuildFile; productRef = A5EE212A289FE524002EF017 /* AWSSigner */; };
+		A5EE212D289FEF99002EF017 /* AWSSigner in Frameworks */ = {isa = PBXBuildFile; productRef = A5EE212C289FEF99002EF017 /* AWSSigner */; };
+		E430F73E2EDF07DA00E263D6 /* AWSSigner in Frameworks */ = {isa = PBXBuildFile; productRef = E430F73D2EDF07DA00E263D6 /* AWSSigner */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5B9DA0E28994CDA00364E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5B9DA0228994CDA00364E4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5B9DA0B28994CDA00364E4F;
+			remoteInfo = "ShayWatchApp WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5B9DA3628994CDB00364E4F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A5B9DA0D28994CDA00364E4F /* Shai's Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A581ABD028D70F5A0087CE9B /* Main_ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A581ABD228D7107C0087CE9B /* ShayWatchApp WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ShayWatchApp WatchKit App.entitlements"; sourceTree = "<group>"; };
+		A5B9DA0828994CDA00364E4F /* ShayWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShayWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B9DA0C28994CDA00364E4F /* Shai's Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shai's Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B9DA1128994CDB00364E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5B9DA1C28994CDB00364E4F /* ShayWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShayWatchAppApp.swift; sourceTree = "<group>"; };
+		A5B9DA1E28994CDB00364E4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A5B9DA2028994CDB00364E4F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A5B9DA2228994CDB00364E4F /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A5B9DA2428994CDB00364E4F /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		A5B9DA2628994CDB00364E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5B9DA2928994CDB00364E4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5B9DA2B28994CDB00364E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B9DA2C28994CDB00364E4F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A5B9DA3A28994DD300364E4F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A5B9DA3C2899536500364E4F /* LocationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
+		A5EE2122289FC6CE002EF017 /* ShayWatchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShayWatchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5EE2124289FC6CE002EF017 /* ShayWatchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShayWatchAppTests.swift; sourceTree = "<group>"; };
+		E430F73F2EDF07DA00E263D6 /* ShayWatchApp-WatchKit-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ShayWatchApp-WatchKit-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091578415148B9EA05AC4362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EE212B289FE524002EF017 /* AWSSigner in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60C74854B4220178B46CF281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52FC6AA2DC0C332000ECA75 /* AWSSigner in Frameworks */,
+				E430F73E2EDF07DA00E263D6 /* AWSSigner in Frameworks */,
+				A5EE212D289FEF99002EF017 /* AWSSigner in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EE211F289FC6CE002EF017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A52FC6A82DC0C332000ECA75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5B9DA0128994CDA00364E4F = {
+			isa = PBXGroup;
+			children = (
+				A5B9DA1028994CDA00364E4F /* ShayWatchApp WatchKit App */,
+				A5B9DA1B28994CDB00364E4F /* ShayWatchApp WatchKit Extension */,
+				A5EE2123289FC6CE002EF017 /* ShayWatchAppTests */,
+				A52FC6A82DC0C332000ECA75 /* Frameworks */,
+				A5B9DA0928994CDA00364E4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5B9DA0928994CDA00364E4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9DA0828994CDA00364E4F /* ShayWatchApp.app */,
+				A5B9DA0C28994CDA00364E4F /* Shai's Watch App.app */,
+				A5EE2122289FC6CE002EF017 /* ShayWatchAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5B9DA1028994CDA00364E4F /* ShayWatchApp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				E430F73F2EDF07DA00E263D6 /* ShayWatchApp-WatchKit-App-Info.plist */,
+				A581ABD228D7107C0087CE9B /* ShayWatchApp WatchKit App.entitlements */,
+				A5B9DA1128994CDB00364E4F /* Assets.xcassets */,
+			);
+			path = "ShayWatchApp WatchKit App";
+			sourceTree = "<group>";
+		};
+		A5B9DA1B28994CDB00364E4F /* ShayWatchApp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9DA1C28994CDB00364E4F /* ShayWatchAppApp.swift */,
+				A5B9DA1E28994CDB00364E4F /* ContentView.swift */,
+				A5B9DA2028994CDB00364E4F /* NotificationController.swift */,
+				A5B9DA2228994CDB00364E4F /* NotificationView.swift */,
+				A5B9DA2428994CDB00364E4F /* ComplicationController.swift */,
+				A5B9DA2628994CDB00364E4F /* Assets.xcassets */,
+				A5B9DA2B28994CDB00364E4F /* Info.plist */,
+				A5B9DA2C28994CDB00364E4F /* PushNotificationPayload.apns */,
+				A5B9DA2828994CDB00364E4F /* Preview Content */,
+				A5B9DA3A28994DD300364E4F /* LocationManager.swift */,
+				A5B9DA3C2899536500364E4F /* LocationTracker.swift */,
+				A581ABD028D70F5A0087CE9B /* Main_ExtensionDelegate.swift */,
+			);
+			path = "ShayWatchApp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A5B9DA2828994CDB00364E4F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A5B9DA2928994CDB00364E4F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5EE2123289FC6CE002EF017 /* ShayWatchAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5EE2124289FC6CE002EF017 /* ShayWatchAppTests.swift */,
+			);
+			path = ShayWatchAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5B9DA0728994CDA00364E4F /* ShayWatchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B9DA3728994CDB00364E4F /* Build configuration list for PBXNativeTarget "ShayWatchApp" */;
+			buildPhases = (
+				A5B9DA0628994CDA00364E4F /* Resources */,
+				A5B9DA3628994CDB00364E4F /* Embed Watch Content */,
+				091578415148B9EA05AC4362 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5B9DA0F28994CDA00364E4F /* PBXTargetDependency */,
+			);
+			name = ShayWatchApp;
+			packageProductDependencies = (
+				A5EE212A289FE524002EF017 /* AWSSigner */,
+			);
+			productName = ShayWatchApp;
+			productReference = A5B9DA0828994CDA00364E4F /* ShayWatchApp.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		A5B9DA0B28994CDA00364E4F /* ShayWatchApp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B9DA3328994CDB00364E4F /* Build configuration list for PBXNativeTarget "ShayWatchApp WatchKit App" */;
+			buildPhases = (
+				A5B9DA0A28994CDA00364E4F /* Resources */,
+				60C74854B4220178B46CF281 /* Frameworks */,
+				A5B9DA1328994CDB00364E4F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShayWatchApp WatchKit App";
+			packageProductDependencies = (
+				A5EE212C289FEF99002EF017 /* AWSSigner */,
+				E430F73D2EDF07DA00E263D6 /* AWSSigner */,
+			);
+			productName = "ShayWatchApp WatchKit App";
+			productReference = A5B9DA0C28994CDA00364E4F /* Shai's Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5EE2121289FC6CE002EF017 /* ShayWatchAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5EE2128289FC6CE002EF017 /* Build configuration list for PBXNativeTarget "ShayWatchAppTests" */;
+			buildPhases = (
+				A5EE211E289FC6CE002EF017 /* Sources */,
+				A5EE211F289FC6CE002EF017 /* Frameworks */,
+				A5EE2120289FC6CE002EF017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShayWatchAppTests;
+			productName = ShayWatchAppTests;
+			productReference = A5EE2122289FC6CE002EF017 /* ShayWatchAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5B9DA0228994CDA00364E4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					A5B9DA0728994CDA00364E4F = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					A5B9DA0B28994CDA00364E4F = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					A5EE2121289FC6CE002EF017 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A5B9DA0528994CDA00364E4F /* Build configuration list for PBXProject "ShayWatchApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5B9DA0128994CDA00364E4F;
+			packageReferences = (
+				A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */,
+			);
+			productRefGroup = A5B9DA0928994CDA00364E4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5B9DA0728994CDA00364E4F /* ShayWatchApp */,
+				A5B9DA0B28994CDA00364E4F /* ShayWatchApp WatchKit App */,
+				A5EE2121289FC6CE002EF017 /* ShayWatchAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5B9DA0628994CDA00364E4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5B9DA0A28994CDA00364E4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B9DA2A28994CDB00364E4F /* Preview Assets.xcassets in Resources */,
+				A5B9DA2728994CDB00364E4F /* Assets.xcassets in Resources */,
+				A5B9DA1228994CDB00364E4F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EE2120289FC6CE002EF017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5B9DA1328994CDB00364E4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B9DA2128994CDB00364E4F /* NotificationController.swift in Sources */,
+				A5B9DA1F28994CDB00364E4F /* ContentView.swift in Sources */,
+				A5B9DA3D2899536500364E4F /* LocationTracker.swift in Sources */,
+				A581ABD128D70F5A0087CE9B /* Main_ExtensionDelegate.swift in Sources */,
+				A5B9DA3B28994DD300364E4F /* LocationManager.swift in Sources */,
+				A5B9DA2528994CDB00364E4F /* ComplicationController.swift in Sources */,
+				A5B9DA1D28994CDB00364E4F /* ShayWatchAppApp.swift in Sources */,
+				A5B9DA2328994CDB00364E4F /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5EE211E289FC6CE002EF017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5EE2125289FC6CE002EF017 /* ShayWatchAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5B9DA0F28994CDA00364E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5B9DA0B28994CDA00364E4F /* ShayWatchApp WatchKit App */;
+			targetProxy = A5B9DA0E28994CDA00364E4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A5B9DA2D28994CDB00364E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6UQAD4B3U2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A5B9DA2E28994CDB00364E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6UQAD4B3U2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5B9DA3428994CDB00364E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ShayWatchApp WatchKit App/ShayWatchApp WatchKit App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShayWatchApp-WatchKit-App-Info.plist";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We really need the location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need the location!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it asap";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERE.watchkitapp;
+				PRODUCT_NAME = "Shai's Watch App";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
+			};
+			name = Debug;
+		};
+		A5B9DA3528994CDB00364E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ShayWatchApp WatchKit App/ShayWatchApp WatchKit App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ShayWatchApp-WatchKit-App-Info.plist";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We really need the location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We need the location!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it asap";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERE.watchkitapp;
+				PRODUCT_NAME = "Shai's Watch App";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.7;
+			};
+			name = Release;
+		};
+		A5B9DA3828994CDB00364E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A5B9DA3928994CDB00364E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A5EE2126289FC6CE002EF017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5EE2127289FC6CE002EF017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ENTER_YOUR_BUNDLE_ID_HERETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5B9DA0528994CDA00364E4F /* Build configuration list for PBXProject "ShayWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B9DA2D28994CDB00364E4F /* Debug */,
+				A5B9DA2E28994CDB00364E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B9DA3328994CDB00364E4F /* Build configuration list for PBXNativeTarget "ShayWatchApp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B9DA3428994CDB00364E4F /* Debug */,
+				A5B9DA3528994CDB00364E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B9DA3728994CDB00364E4F /* Build configuration list for PBXNativeTarget "ShayWatchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B9DA3828994CDB00364E4F /* Debug */,
+				A5B9DA3928994CDB00364E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5EE2128289FC6CE002EF017 /* Build configuration list for PBXNativeTarget "ShayWatchAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5EE2126289FC6CE002EF017 /* Debug */,
+				A5EE2127289FC6CE002EF017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adam-fowler/aws-signer-v4.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A52FC6A92DC0C332000ECA75 /* AWSSigner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */;
+			productName = AWSSigner;
+		};
+		A5EE212A289FE524002EF017 /* AWSSigner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */;
+			productName = AWSSigner;
+		};
+		A5EE212C289FEF99002EF017 /* AWSSigner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */;
+			productName = AWSSigner;
+		};
+		E430F73D2EDF07DA00E263D6 /* AWSSigner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5EE2129289FE524002EF017 /* XCRemoteSwiftPackageReference "aws-signer-v4" */;
+			productName = AWSSigner;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A5B9DA0228994CDA00364E4F /* Project object */;
+}
