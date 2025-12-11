@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "find-shai-mobile-app",
+    "slug": "find-shai-mobile-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },    
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ENTER_YOUR_BUNDLE_IDENTIFIER_HERE",
+      "infoPlist": {
+        "Privacy - Location When In Use Usage Description": "This app uses your location to enhance the user experience.",
+        "NSLocationAlwaysUsageDescription": "This app uses your location in the background for enhanced notifications."
+      }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow find-shai to use your location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#ffffff",
+          "sounds": []
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

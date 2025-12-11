@@ -1,0 +1,37 @@
+{
+  "name": "find-shai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.2.1",
+    "@aws-amplify/backend-cli": "^1.2.6",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.8.4",
+    "aws-cdk": "^2.158.0",
+    "aws-cdk-lib": "^2.158.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.23.1",
+    "eslint": "^9.14.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-eventbridge": "^3.658.1",
+    "@aws-sdk/client-location": "^3.654.0",
+    "@aws-sdk/client-pinpoint": "^3.654.0",
+    "aws-amplify": "^6.6.0",
+    "axios": "^1.7.7",
+    "googleapis": "^144.0.0",
+    "ical.js": "^2.1.0",
+    "uuid": "^11.0.2"
+  }
+}

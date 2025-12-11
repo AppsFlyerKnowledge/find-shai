@@ -1,0 +1,20 @@
+{
+  "version": "0",
+  "id": "sample-event-id",
+  "detail-type": "Location Geofence Event",
+  "source": "aws.geo",
+  "account": "123456789012",
+  "time": "2022-12-19T18:04:28Z",
+  "region": "eu-west-1",
+  "resources": [
+    "arn:aws:geo:eu-west-1:123456789012:geofence-collection/your-geofence-collection",
+    "arn:aws:geo:eu-west-1:123456789012:tracker/your-tracker-name"
+  ],
+  "detail": {
+    "event_type": "EXIT",
+    "geofence_id": "sample-geofence-id",
+    "loved_one_id": "sample-loved-one-id",
+    "time_happened": "2022-12-19T18:04:28Z",
+    "position": [0.0, 0.0]
+  }
+}
