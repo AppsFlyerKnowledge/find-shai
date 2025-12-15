@@ -110,3 +110,48 @@ Then run the app:
 npx expo run:ios
 ```
 
+## Testing & Development Features
+
+### Creating a Loved One for Testing
+
+The mobile app includes a testing feature that allows you to create a Loved One directly from the Settings screen. This is useful during development and testing.
+
+**To enable the testing feature:**
+
+1. Open `find-shai/find-shai-mobile-app/app/(tabs)/settings/settingsView.tsx`
+2. Change the `SHOW_DEV_FEATURES` flag from `false` to `true`:
+
+```typescript
+// ============================================
+// FEATURE FLAGS - Set to true for creating loved one for testing
+// ============================================
+const SHOW_DEV_FEATURES = true;  // Changed from false
+// ============================================
+```
+
+3. Restart the app
+4. Navigate to the Settings tab
+5. You'll see a "Create Loved One (Testing)" button
+6. Tap the button to create a Loved One with default values:
+   - Name: "Shai"
+   - Email: "shai@example.com"
+   - Calendar Token: "none"
+
+**To change these values after creation:**
+
+You can update the Loved One record directly in AWS DynamoDB:
+1. Go to AWS Console → DynamoDB
+2. Find the `LovedOne` table
+3. Search for the Loved One record (using the `HARDCODED_LOVED_ONE_ID` value)
+4. Edit the record to update fields like `name`, `email`, `calander_token`, etc.
+
+Alternatively, you can modify the default values in the code before creating the Loved One. Edit the `createLovedOne` function call in `settingsView.tsx` (line 26) to pass custom values:
+
+```typescript
+const success = await createLovedOne('Your Name', 'your@email.com', 'your-calendar-token');
+```
+
+> **Note**: This feature creates a Loved One record in DynamoDB but uses placeholder values for `tracker_arn` and `geofence_collection_arn`. For production use, create Loved Ones through the signup process (with type `"lovedone"`) which automatically sets up all required AWS Location Service resources.
+
+> **Warning**: Keep `SHOW_DEV_FEATURES` set to `false` in production builds. This feature is intended for development and testing only.
+
