@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, SectionList, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { useFocusEffect } from 'expo-router';
 import { Notification } from '../../../amplify/data/resource';
 import { useStateContext } from '@/state/state';
+import { fetchNotifications } from '@/api/data';
 
 // Section type for grouping notifications by date
 interface NotificationSection {
@@ -127,8 +129,35 @@ const SectionHeader = ({ title }: { title: string }) => (
 );
 
 const Notifications = () => {
-  const { state } = useStateContext();
+  const { state, dispatch } = useStateContext();
   const sections = sortNotifications(state.notifications);
+  const notificationPollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Fetch notifications when tab is focused
+  useFocusEffect(
+    React.useCallback(() => {
+      // Fetch immediately when tab is focused
+      if (state.userProfile) {
+        fetchNotifications(state.userProfile, dispatch);
+      }
+
+      // Set up polling every 10 seconds while tab is focused
+      notificationPollIntervalRef.current = setInterval(() => {
+        if (state.userProfile) {
+          console.log('Polling for notification updates...');
+          fetchNotifications(state.userProfile, dispatch);
+        }
+      }, 10 * 1000); // 10 seconds
+
+      // Cleanup when tab loses focus
+      return () => {
+        if (notificationPollIntervalRef.current) {
+          clearInterval(notificationPollIntervalRef.current);
+          notificationPollIntervalRef.current = null;
+        }
+      };
+    }, [state.userProfile, dispatch])
+  );
 
   return (
     <View style={styles.container}>
