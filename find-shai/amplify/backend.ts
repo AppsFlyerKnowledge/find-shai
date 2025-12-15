@@ -55,20 +55,10 @@ const eventBus = aws_events.EventBus.fromEventBusName(
 
 backend.data.addEventBridgeDataSource("MyEventBridgeDataSource", eventBus);
 
-// Create an EventBridge rule to route AWS Location Service geofence events to the notification-decider Lambda
-// This triggers when the watch enters or exits a geofence
-const geofenceEventRule = new aws_events.Rule(analyticsStack, "GeofenceEventRule", {
-  eventBus: eventBus,
-  ruleName: "enter-exit-geofence-lambda-trigger",
-  eventPattern: {
-    source: ["aws.geo"],
-    detailType: ["Location Geofence Event"],
-    // Match all geofence collections - you can restrict this to specific collections if needed
-  },
-  targets: [
-    new aws_events_targets.LambdaFunction(notificationDeciderLambda),
-  ],
-});
+// NOTE: Removed global EventBridge rule to prevent duplicate notifications
+// Per-user EventBridge rules are created in post-confirmation/handler.ts for each loved one
+// These per-user rules handle geofence events and trigger notifications for all caregivers
+// The Lambda handler loops through all caregivers, so all caregivers still receive notifications
 
 // create a Pinpoint app
 const pinpointApp = new CfnApp(analyticsStack, "Pinpoint", {

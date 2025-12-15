@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
@@ -19,6 +19,8 @@ const HARDCODED_LOVED_ONE_ID = "ENTER_YOUR_LOVED_ONE_ID_HERE";
 // Component that fetches initial data after StateProvider is set up
 function DataFetcher({ children }: { children: React.ReactNode }) {
   const { state, dispatch } = useStateContext();
+  const locationPollIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -62,6 +64,35 @@ function DataFetcher({ children }: { children: React.ReactNode }) {
 
     fetchUserData();
   }, [dispatch]);
+
+  // Set up automatic location polling
+  useEffect(() => {
+    // Only start polling if we have a caregiver profile with location_update_frequent setting
+    if (!state.userProfile || !state.userProfile.location_update_frequent) {
+      return;
+    }
+
+    const pollIntervalSeconds = state.userProfile.location_update_frequent || 15;
+    const pollIntervalMs = pollIntervalSeconds * 1000;
+
+    console.log(`Starting location polling every ${pollIntervalSeconds} seconds`);
+
+    // Set up interval to poll for location updates
+    locationPollIntervalRef.current = setInterval(() => {
+      console.log('Polling for location update...');
+      fetchLastLocation(HARDCODED_LOVED_ONE_ID, dispatch);
+    }, pollIntervalMs);
+
+    // Cleanup interval on unmount or when dependencies change
+    return () => {
+      if (locationPollIntervalRef.current) {
+        console.log('Stopping location polling');
+        clearInterval(locationPollIntervalRef.current);
+        locationPollIntervalRef.current = null;
+      }
+    };
+  }, [state.userProfile?.location_update_frequent, dispatch]);
+
 
   if (state.loading) {
     return (
