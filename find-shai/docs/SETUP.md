@@ -18,6 +18,73 @@ Before you begin, ensure you have the following installed:
 | Expo CLI | Latest | `npm install -g expo-cli` |
 
 
+## Project Structure
+
+The Find Shai project consists of two main parts:
+
+### 1. Find Shai (Main Application)
+Contains the AWS backend infrastructure and the mobile application.
+
+### 2. Watch App (ShayWatchApp)
+Apple Watch application that tracks location and sends updates to AWS.
+
+
+### Component Relationships
+
+**Data Flow:**
+- **Watch App** → Sends GPS location → **AWS Location Service**
+- **AWS Location Service** → Triggers geofence events → **EventBridge**
+- **EventBridge** → Routes events → **notification-decider Lambda**
+- **Lambda** → Sends notifications → **Pinpoint** → **Mobile App**
+- **Mobile App** → Queries data → **AppSync** → **DynamoDB**
+- **Mobile App** → Calls functions → **Lambda Functions** → **AWS Services**
+
+### Directory Structure
+
+```
+find-shai/
+├── find-shai/
+│   ├── amplify/                    # AWS Backend (SERVER-SIDE)
+│   │   │                           # Defines & deploys AWS infrastructure
+│   │   ├── auth/                   # Cognito Authentication
+│   │   │   ├── post-confirmation/ # Creates Caregiver on signup
+│   │   │   └── delete-user/        # Cleans up user data
+│   │   ├── data/                   # AppSync & DynamoDB schema
+│   │   ├── functions/              # Lambda Functions
+│   │   │   ├── calendar-sync/      # Syncs iCal events & creates geofences
+│   │   │   ├── location-fetcher/   # Gets latest position from tracker
+│   │   │   ├── geocoding/          # Converts addresses to coordinates
+│   │   │   ├── notification-decider/ # Processes events & sends notifications
+│   │   │   └── watch-pairing/      # Watch pairing functionality
+│   │   └── backend.ts              # Backend configuration
+│   │
+│   └── find-shai-mobile-app/       # React Native Mobile App (CLIENT-SIDE)
+│       ├── app/                     # Expo Router screens
+│       │   └── (tabs)/              # Tab navigation
+│       │       ├── index.tsx        # Home screen
+│       │       ├── calendar/        # Calendar view
+│       │       ├── notifications/   # Notifications list
+│       │       ├── safezones/       # Safe zones management
+│       │       └── settings/       # Settings & configuration
+│       ├── api/                     # API client layer (connects to backend)
+│       │   ├── amplify-config.tsx   # Configures Amplify SDK to use backend
+│       │   └── data.tsx            # GraphQL client (queries AppSync API)
+│       ├── services/               # External service integrations
+│       │   ├── geocoding.ts        # Geocoding service
+│       │   └── pushNotifications.ts # Push notification service
+│       ├── state/                   # State management
+│       │   └── state.tsx           # Global app state
+│       └── ios/                     # iOS native code
+│
+└── shaywatchapp/                   # Apple Watch App
+    ├── ShayWatchApp WatchKit App/  # Watch app bundle
+    └── ShayWatchApp WatchKit Extension/ # Watch app logic
+        ├── LocationTracker.swift    # Sends location to AWS
+        ├── LocationManager.swift    # GPS location management
+        ├── ContentView.swift        # Main watch UI
+        └── ComplicationController.swift # Watch face complication
+```
+
 ## AWS Account Setup
 
 ### 1. Create an AWS Account
