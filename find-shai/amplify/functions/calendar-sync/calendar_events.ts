@@ -3,11 +3,6 @@ import ICAL from "ical.js";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 
-// Initialize the Google Calendar API with a static token
-// const calendar = google.calendar({
-//   version: "v3",
-//   auth: "REMOVED",
-// });
 
 // Function to list Google Calendar events
 export async function listEvents(
